@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const errors = require("../utils/errors.js");
 module.exports = {
     help: {
-        name: "addrole",
+        name: "createtextchannel",
         usage: "!addrole <user> <role> ",
         description: "Adds a role to a user"
     },
