@@ -29,7 +29,7 @@ run: async (bot, message, args) => {
         userinfo = message.mentions.members.first();
     }
     else {
-        user = message.author;
+        userinfo = message.author;
     }
     const member = message.guild.member(userinfo);
 
