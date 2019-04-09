@@ -10,8 +10,6 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-    let userinfo = message.mentions.members.first();
-    if(!userinfo) return message.channel.send("Can't find user!");  
     
     if(args[0] == "help"){
 
@@ -25,14 +23,23 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
- 
+    let userinfo;
+    if(message.mentions.members.first()){
+        userinfo = message.mentions.members.first();
+    }
+    else {
+        user = message.author;
+    }
+    const member = message.guild.member(userinfo);
 
-        let uicon = user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
         .setColor("#caff0c")
-        .setImage(uicon)
-        .addField("Username: ", `${userinfo}#${userinfo.tag}`)
+        .setImage(message.author.avatarURL)
+        .addField("Username: ", `${userinfo.username}#${userinfo.tag}`)
         .addField("ID: ", userinfo.id)
+        .addField("Created At: ", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
+        .addField("Status: ", `${userinfo.presense.status}`)
+        .addField("Roles: ", member.roles.map(roles => `${roles.name}`).join(", "))
         .setTimestamp();
     
         return message.channel.send(botembed);
