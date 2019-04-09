@@ -21,6 +21,7 @@ run: async (bot, message, args) => {
         return;
     }
     let commandsEmbed = new Discord.RichEmbed()
+        .setColor("#FF0000")
         .setTitle("Reactions")
         .setDescription("!ascension \n !broodmother \n !monkey \n !ragboss \n !rockwell \n !raidlist \n !troll \n !warnings \n !tempmute \n !say \n !report \n !removerole \n !addrole \n !8ball");
 
