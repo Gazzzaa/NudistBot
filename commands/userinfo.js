@@ -23,12 +23,15 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
+    let userinfo = message.mentions.members.first();
+    if(!userinfo) return message.channel.send("Can't find user!");  
+
         let uicon = user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
         .setColor("#caff0c")
         .setThumbnail(uicon)
-        .addField("Username: ", `${message.author.username}#${message.author.discriminator}`)
-        .addField("ID: ", message.author.id)
+        .addField("Username: ", `${userinfo}#${userinfo.discriminator}`)
+        .addField("ID: ", userinfo.id)
         .setTimestamp();
     
         return message.channel.send(botembed);
