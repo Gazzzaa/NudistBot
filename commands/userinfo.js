@@ -27,7 +27,7 @@ run: async (bot, message, args) => {
     }
  
 
-        let uicon = user.displayAvatarURL;
+        let uicon = userinfo.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
         .setColor("#caff0c")
         .setThumbnail(uicon)
