@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-
+const moment = require("moment");
 module.exports = {
     help: {
         name: "serverinfo"
@@ -14,7 +14,7 @@ run: async (bot, message, args) => {
     .setThumbnail(sicon)
     .addField("Server Name", message.guild.name)
     .addField("Server ID: ", message.guild.id)
-    .addField("Created On", message.guild.createdAt)
+    .addField("Created On", `${moment.utc(guild.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
     .addField("Owner: ", message.guild.owner)
     .addField("Total Members", message.guild.memberCount)
     .addField("Roles", message.guild.roles.size)
