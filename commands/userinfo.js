@@ -31,7 +31,7 @@ run: async (bot, message, args) => {
         let botembed = new Discord.RichEmbed()
         .setColor("#caff0c")
         .setImage(uicon)
-        .addField("Username: ", `${userinfo}#${userinfo.tag}`)
+        .addField("Username: ", `${message.userinfo.username}#${userinfo.tag}`)
         .addField("ID: ", userinfo.id)
         .setTimestamp();
     
