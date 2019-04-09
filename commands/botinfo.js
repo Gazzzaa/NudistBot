@@ -25,7 +25,6 @@ run: async (bot, message, args) => {
     }
         let bicon = bot.user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
-        .setDescription("Bot Information")
         .setColor("#caff0c")
         .setThumbnail(bicon)
         .addField("Bot Name", bot.user.username)
