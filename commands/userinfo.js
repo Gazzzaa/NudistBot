@@ -1,0 +1,39 @@
+const Discord = require("discord.js");
+
+
+module.exports = {
+    help: {
+        name: "userinfo",
+        description: "Shows information about the user",
+        usage: "!userinfo",
+
+    },
+
+run: async (bot, message, args) => {
+
+    if(args[0] == "help"){
+
+        let Embed = new Discord.RichEmbed()
+        .setDescription("~User Information~")
+        .setColor("#FF0000")
+        .addField("Command: ","!userinfo" )
+        .addField(`Usage: `,module.exports.help.usage)
+        .addField("Description: ", module.exports.help.description)
+        .setTimestamp();
+        message.channel.send(Embed);
+        return;
+    }
+        let uicon = user.displayAvatarURL;
+        let botembed = new Discord.RichEmbed()
+        .setColor("#caff0c")
+        .setThumbnail(uicon)
+        .addField("Username: ", `${message.author.username}#${message.author.discriminator}`)
+        .addField("ID: ", message.author.id)
+        .setTimestamp();
+    
+        return message.channel.send(botembed);
+      
+    
+    
+}
+}
