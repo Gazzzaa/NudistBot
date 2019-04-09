@@ -3,7 +3,7 @@ module.exports = {
     help: {
         name: "timer",
         description: "Sets a timer",
-        usage: "!timer <name> <message> <time>"
+        usage: "!timer "
     },
 
 run: async (bot, message, args) => {
@@ -20,7 +20,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
+    
         let name = "Fill the Generators"
         const mutetime = args[2] || "7d";
         
