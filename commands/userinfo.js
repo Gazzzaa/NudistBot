@@ -25,8 +25,8 @@ run: async (bot, message, args) => {
         return;
     }
     let userinfo;
-    if(message.mentions.members.first()){
-        userinfo = message.mentions.members.first();
+    if(message.mentions.guildMembers.first()){
+        userinfo = message.mentions.guildMembers.first();
     }
     else {
         userinfo = message.author;
