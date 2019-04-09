@@ -23,8 +23,8 @@ run: async (bot, message, args) => {
     let commandsEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .setTitle("Commands")
-        .setDescription("!help \n !commands \n !reactions \n !botinfo \n !serverinfo \n !kick \n !ban \n !warn \n !warnings \n !tempmute \n !say \n !report \n !removerole \n !addrole \n !8ball");
-
+        .setDescription("!help \n !commands \n !reactions \n !ping \n !botinfo \n !serverinfo \n !kick \n !ban \n !warn \n !warnings \n !tempmute \n !say \n !report \n !removerole \n !addrole \n !8ball")
+        .setFooter("Type help after any command to get help, e.g !commands help")
         
         
     message.channel.send(commandsEmbed);
