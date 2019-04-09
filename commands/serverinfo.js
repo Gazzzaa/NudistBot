@@ -13,8 +13,12 @@ run: async (bot, message, args) => {
     .setColor("#caff0c")
     .setThumbnail(sicon)
     .addField("Server Name", message.guild.name)
-    .addField("Created On", bot.guild.createdAt)
-    .addField("Total Members", message.guild.memberCount);
+    .addField("Server ID: ", message.guild.id)
+    .addField("Created On", message.guild.createdAt)
+    .addField("Owner: ", message.guild.owner)
+    .addField("Total Members", message.guild.memberCount)
+    .addField("Roles", message.guild.roles.size)
+    .addField("Region", message.guild.region);
     return message.channel.send(serverembed);
     
     
