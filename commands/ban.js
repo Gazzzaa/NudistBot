@@ -11,7 +11,7 @@ run: async (bot, message, args) => {
     if(args[0] == "help"){
 
         let Embed = new Discord.RichEmbed()
-        .setDescription("~Ban~")
+        .setTitle("Ban")
         .setColor("#FF0000")
         .addField("Command: ","!ban" )
         .addField(`Usage: `,module.exports.help.usage)
@@ -29,7 +29,7 @@ run: async (bot, message, args) => {
         
         
         let banEmbed = new Discord.RichEmbed()
-        .setDescription("~Ban~")
+        .setDescription("Ban")
         .setColor("#FF0000")
         .addField("Banned User", `${bUser} with ID: ${bUser.id}`)
         .addField("Banned By", `<${message.author.id}> with ID: ${message.author.id}`)

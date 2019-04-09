@@ -4,10 +4,22 @@ const errors = require("../utils/errors.js");
 module.exports = {
     help:{
     name: "tempmute",
-    description: "Mutes user temoprairly"   
+    description: "Mutes user for a time period",
+    usage: "!tempmute <user> <10m>"
 },
     run: async (bot, message, args) => {
-    
+        if(args[0] == "help"){
+
+            let Embed = new Discord.RichEmbed()
+            .setTitle("TempMute")
+            .setColor("#FF0000")
+            .addField("Command: ","!tempmute" )
+            .addField(`Usage: `,module.exports.help.usage)
+            .addField("Description: ", module.exports.help.description)
+            .setTimestamp();
+            message.channel.send(Embed);
+            return;
+        }
         let tmUser = message.mentions.members.first()
         if(!tmUser) return message.reply("Can't find user!");
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");

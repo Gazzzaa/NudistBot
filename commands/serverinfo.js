@@ -2,11 +2,24 @@ const Discord = require("discord.js");
 const moment = require("moment");
 module.exports = {
     help: {
-        name: "serverinfo"
+        name: "serverinfo",
+        description: "Shows server information",
+        usage: "!serverinfo"
     },
 
 run: async (bot, message, args) => {
-    
+    if(args[0] == "help"){
+
+        let Embed = new Discord.RichEmbed()
+        .setTitle("Server Information")
+        .setColor("#FF0000")
+        .addField("Command: ","!serverinfo" )
+        .addField(`Usage: `,module.exports.help.usage)
+        .addField("Description: ", module.exports.help.description)
+        .setTimestamp();
+        message.channel.send(Embed);
+        return;
+    }
     let sicon = message.guild.iconURL
     let serverembed = new Discord.RichEmbed()
     .setDescription("Server Information")

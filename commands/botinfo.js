@@ -14,7 +14,7 @@ run: async (bot, message, args) => {
     if(args[0] == "help"){
 
         let Embed = new Discord.RichEmbed()
-        .setDescription("~BotInfo~")
+        .setTitle("BotInfo")
         .setColor("#FF0000")
         .addField("Command: ","!botinfo" )
         .addField(`Usage: `,module.exports.help.usage)

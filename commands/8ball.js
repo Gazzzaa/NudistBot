@@ -14,7 +14,7 @@ let replies = ["Yes.","No.","I don't know.","Maybe.","Ask me later."];
 if(args[0] == "help"){
 
     let Embed = new Discord.RichEmbed()
-    .setDescription("~8Ball~")
+    .setTitle("8Ball")
     .setColor("#FF0000")
     .addField("Command: ","!8ball" )
     .addField(`Usage: `,module.exports.help.usage)

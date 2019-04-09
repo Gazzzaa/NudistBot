@@ -2,11 +2,24 @@ const Discord = require("discord.js");
 
 module.exports = {
     help: {
-        name: "report"
+        name: "report",
+        description: "Reports a user",
+        usage: "!report <user> <reason>"
     },
 
 run: async (bot, message, args) => {
-    
+    if(args[0] == "help"){
+
+        let Embed = new Discord.RichEmbed()
+        .setTitle("Report")
+        .setColor("#FF0000")
+        .addField("Command: ","!report" )
+        .addField(`Usage: `,module.exports.help.usage)
+        .addField("Description: ", module.exports.help.description)
+        .setTimestamp();
+        message.channel.send(Embed);
+        return;
+    }
     let rUser = message.mentions.members.first()
     if(!rUser) return message.channel.send("Couldnt find user.");
     let reason = args.slice(1).join(" ");
