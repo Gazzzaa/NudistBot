@@ -9,8 +9,6 @@ module.exports = {
 
 run: async (bot, message, args) => {
 
-if(!args[0]) return message.reply("Enter a question for the magic 8ball!");
-let replies = ["Yes.","No.","I don't know.","Maybe.","Ask me later."];
 if(args[0] == "help"){
 
     let Embed = new Discord.RichEmbed()
