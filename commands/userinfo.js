@@ -30,8 +30,8 @@ run: async (bot, message, args) => {
         let uicon = userinfo.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
         .setColor("#caff0c")
-        .setThumbnail(uicon)
-        .addField("Username: ", `${userinfo}#${userinfo.discriminator}`)
+        .setImage(uicon)
+        .addField("Username: ", `${userinfo}#${userinfo.tag}`)
         .addField("ID: ", userinfo.id)
         .setTimestamp();
     
