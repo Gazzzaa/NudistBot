@@ -9,7 +9,7 @@ run: async (bot, message, args) => {
     
     let rUser = message.mentions.members.first()
     if(!rUser) return message.channel.send("Couldnt find user.");
-    let reason = args.join(" ").slice(22);
+    let reason = args.slice(1).join(" ");
     
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Reports")

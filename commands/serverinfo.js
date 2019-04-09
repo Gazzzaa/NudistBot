@@ -13,7 +13,7 @@ run: async (bot, message, args) => {
     .setColor("#caff0c")
     .setThumbnail(sicon)
     .addField("Server Name", message.guild.name)
-    .addField("Created On", bot.user.createdAt)
+    .addField("Created On", bot.guild.createdAt)
     .addField("Total Members", message.guild.memberCount);
     return message.channel.send(serverembed);
     

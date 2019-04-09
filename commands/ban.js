@@ -32,7 +32,7 @@ run: async (bot, message, args) => {
         .setDescription("~Ban~")
         .setColor("#FF0000")
         .addField("Banned User", `${bUser} with ID: ${bUser.id}`)
-        .addField("Banned By", `<@${message.author.id}> with ID: ${message.author.id}`)
+        .addField("Banned By", `<${message.author.id}> with ID: ${message.author.id}`)
         .addField("Time", message.createdAt)
         .addField("Reason", bReason);
         

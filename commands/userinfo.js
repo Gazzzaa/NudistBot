@@ -38,7 +38,7 @@ run: async (bot, message, args) => {
         .setImage(userinfo.avatarURL)
         .addField("Username: ", `${userinfo.username}#${userinfo.discriminator}`)
         .addField("ID: ", userinfo.id)
-        .addField("Created At: ", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
+        .addField("Profile Created At: ", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
         .addField("Status: ", `${userinfo.presence.status}`)
         .addField("Roles: ", member.roles.map(roles => `${roles.name}`).join(", "))
         .setTimestamp();
