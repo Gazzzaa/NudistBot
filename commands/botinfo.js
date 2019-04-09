@@ -30,7 +30,7 @@ run: async (bot, message, args) => {
         .setThumbnail(bicon)
         .addField("Bot Name", bot.user.username)
         .addField("Created On", bot.user.createdAt)
-        .addField("Author", "Emerald");
+        .setFooter('Created by Emerald', 'https://imgur.com/SHYoZCm');
     
         return message.channel.send(botembed);
       
