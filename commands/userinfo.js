@@ -10,7 +10,9 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-
+    let userinfo = message.mentions.members.first();
+    if(!userinfo) return message.channel.send("Can't find user!");  
+    
     if(args[0] == "help"){
 
         let Embed = new Discord.RichEmbed()
@@ -23,8 +25,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-    let userinfo = message.mentions.members.first();
-    if(!userinfo) return message.channel.send("Can't find user!");  
+ 
 
         let uicon = user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
