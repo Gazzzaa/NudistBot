@@ -11,7 +11,7 @@ run: async (bot, message, args) => {
     
     let commandsEmbed = new Discord.RichEmbed()
         .setTitle("**Commands**")
-        .setDescription("**!help** \n **!commands** \n **!botinfo** \n **!serverinfo** \n **!kick** \n **!ban** \n **!warn** \n **!warnings** \n **!tempmute** \n **!say** \n **!report** \n **!removerole** \n **!addrole** \n **!8ball** ");
+        .setDescription("```**!help** \n **!commands** \n **!botinfo** \n **!serverinfo** \n **!kick** \n **!ban** \n **!warn** \n **!warnings** \n **!tempmute** \n **!say** \n **!report** \n **!removerole** \n **!addrole** \n **!8ball**```");
 
         
         
