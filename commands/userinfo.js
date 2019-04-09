@@ -36,7 +36,7 @@ run: async (bot, message, args) => {
         let botembed = new Discord.RichEmbed()
         .setColor("#caff0c")
         .setImage(message.author.avatarURL)
-        .addField("Username: ", `${userinfo.username}#${userinfo.tag}`)
+        .addField("Username: ", `${userinfo.username}#${userinfo.discriminator}`)
         .addField("ID: ", userinfo.id)
         .addField("Created At: ", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
         .addField("Status: ", `${userinfo.presence.status}`)
