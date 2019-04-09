@@ -39,7 +39,7 @@ run: async (bot, message, args) => {
         .addField("Username: ", `${userinfo.username}#${userinfo.tag}`)
         .addField("ID: ", userinfo.id)
         .addField("Created At: ", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
-        .addField("Status: ", `${userinfo.presense.status}`)
+        .addField("Status: ", userinfo.presense.status)
         .addField("Roles: ", member.roles.map(roles => `${roles.name}`).join(", "))
         .setTimestamp();
     
