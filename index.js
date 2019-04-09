@@ -51,7 +51,7 @@ bot.on("guildMemberAdd", async member =>{
   let joinChannel = member.guild.channels.find(c => c.name === "server-join");
   joinChannel.send(`Welcome to nudist discord ${member}, ${verifiRole} will verifi you soon!`);
   let needsverifiRole = member.guild.roles.find(r => r.name === "Needs Verified");
-  await(member.addRole(gRole.id));
+  await(member.addRole(needsverifiRole.id));
 
 });
 bot.on("guildMemberRemove", async member =>{
