@@ -57,11 +57,7 @@ bot.on("guildMemberRemove", async member =>{
   let leaveChannel = member.guild.channels.find(c => c.name === "server-leave");
   leaveChannel.send(`The member ${member} has left the discord, ${DiscordRole}`);
 });
-if (command === 'ping') {
-  message.channel.send('Pong.');
-} else if (command === 'beep') {
-  message.channel.send('Boop.');
-}
+
 bot.on("message", async message =>{
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
