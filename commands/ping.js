@@ -2,9 +2,9 @@ const Discord = require("discord.js");
 
 module.exports = {
     help: {
-        name: "8ball",
-        description: "Answers a question",
-        usage: "!8ball <question>"
+        name: "ping",
+        description: "Shows ping",
+        usage: "!ping"
     },
 
 run: async (bot, message, args) => {
@@ -14,9 +14,9 @@ let replies = ["Yes.","No.","I don't know.","Maybe.","Ask me later."];
 if(args[0] == "help"){
 
     let Embed = new Discord.RichEmbed()
-    .setTitle("8Ball")
+    .setTitle("Ping")
     .setColor("#FF0000")
-    .addField("Command: ","!8ball" )
+    .addField("Command: ","!ping" )
     .addField(`Usage: `,module.exports.help.usage)
     .addField("Description: ", module.exports.help.description)
     .setTimestamp();
