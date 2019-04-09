@@ -42,7 +42,7 @@ fs.readdir("./commands/reactions/", (err, files) =>{
 
 bot.on("ready", async () =>{
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity("Playing Ark Survival Evolved");
+  bot.user.setActivity("Ark Survival Evolved");
 });
 
 bot.on("guildMemberAdd", async member =>{
