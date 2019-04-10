@@ -25,7 +25,7 @@ run: async (bot, message, args) => {
      let commandsEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .setTitle("Commands")
-        .addField('Inline field Aliases', 'Some value here', true)
+        .addField('Inline field Aliases', 'Some value here', false)
         .setTitle("Aliases")
         .setDescription(bot.commands.map(commands => commands.help.command).join(` \n ` ))
         //.addField("Command: ", module.exports.help.command)
