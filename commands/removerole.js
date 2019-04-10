@@ -27,12 +27,12 @@ run: async (bot, message, args) => {
     if(!role) return message.reply("Specify a role!");
     let gRole = message.guild.roles.filter(r => r.name !== "@everyone").find(r => r.name === role);
     if(!gRole) return message.reply("Couldn't find that role.");
-
+    const member = message.guild.member(rrUser);
     if(!rrUser.roles.has(gRole.id)) return message.reply("They don't have that role.");
     await(rrUser.removeRole(gRole.id));
     let roleEmbed = new Discord.RichEmbed()
-    .addField("Addeed Role", gRole)
-    .addField("Username", raUser)
+    .addField("Removed Role", gRole)
+    .addField("Username", rrUser)
     .addField("Roles: ", member.roles.filter(r => r.name !== "@everyone").map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
 
