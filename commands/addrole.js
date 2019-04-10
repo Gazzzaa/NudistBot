@@ -36,8 +36,9 @@ run: async (bot, message, args) => {
     if(raUser.roles.has(gRole.id)) return message.reply("They already have that role.");
     await(raUser.addRole(gRole.id));
     let roleEmbed = new Discord.RichEmbed()
+    .setColour("#ff0000")
     .addField("Addeed Role", gRole)
-    .addField("Username", raUser)
+    .addField("To User", raUser)
     .addField("Roles: ", member.roles.filter(r => r.name !== "@everyone").map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
    // message.channel.send(`${raUser} has been given the role ${gRole.name}`);
