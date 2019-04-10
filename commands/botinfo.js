@@ -7,6 +7,7 @@ module.exports = {
         description: "Shows information about the bot",
         usage: "!botinfo",
         command: "!botinfo",
+        aliases: "",
 
     },
 

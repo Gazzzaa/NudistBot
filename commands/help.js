@@ -4,7 +4,8 @@ module.exports = {
         name: "help",
         description: "Use !commands to get lists of commands.\n To find help on a command write help after it, e.g !addrole help",
         usage: "!help",
-        command: "!help", 
+        command: "!help",
+        aliases: "", 
     },
 
 run: async (bot, message, args) => {

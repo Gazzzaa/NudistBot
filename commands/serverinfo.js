@@ -6,6 +6,7 @@ module.exports = {
         description: "Shows server information",
         usage: "!serverinfo",
         command: "!serverinfo",
+        aliases: "",
     },
 
 run: async (bot, message, args) => {

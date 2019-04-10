@@ -7,6 +7,7 @@ module.exports = {
     description: "Mutes user for a time period",
     usage: "!tempmute <user> <10m>",
     command: "!tempmute",
+    aliases: "",
 },
     run: async (bot, message, args) => {
         if(args[0] == "help"){

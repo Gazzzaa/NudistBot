@@ -8,6 +8,7 @@ module.exports = {
         description: "Shows information about the user",
         usage: "!userinfo",
         command: "!userinfo",
+        aliases: "",
 
     },
 

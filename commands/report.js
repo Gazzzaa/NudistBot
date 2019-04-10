@@ -6,6 +6,7 @@ module.exports = {
         description: "Reports a user",
         usage: "!report <user> <reason>",
         command: "!report",
+        aliases: "",
     },
 
 run: async (bot, message, args) => {

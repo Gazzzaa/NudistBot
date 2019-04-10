@@ -6,6 +6,7 @@ module.exports = {
         description: "Kick a user from the server",
         usage: "!kick <user> <reason>",
         command: "!kick",
+        aliases: "",
     }, 
 
 run: async (bot, message, args) => {
