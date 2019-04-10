@@ -21,7 +21,7 @@ run: async (bot, message, args) => {
         return;
     }
      let commandsEmbed = new Discord.RichEmbed()
-        .setDescription(bot.commands.map(commands => commands.help.usage).join(` /n ` ));
+        .setDescription(bot.commands.map(commands => commands.help.usage).join(` \n ` ));
      
         //.setColor("#FF0000")
         //.setTitle("Commands")
