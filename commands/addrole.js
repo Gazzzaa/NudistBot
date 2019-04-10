@@ -37,9 +37,8 @@ run: async (bot, message, args) => {
     await(raUser.addRole(gRole.id));
     
     let roleEmbed = new Discord.RichEmbed()
-    .setTitle("Added Role")
-    .setDescription("Addeed Role", gRole)
-    .setDescription("Username", raUser)
+    .addField("Addeed Role", gRole)
+    .addField("Username", raUser)
     .addField("Roles: ", member.roles.map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
    // message.channel.send(`${raUser} has been given the role ${gRole.name}`);
