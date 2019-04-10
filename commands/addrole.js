@@ -29,7 +29,7 @@ run: async (bot, message, args) => {
     if(!raUser) return message.channel.send("Can't find user!");    
     let role = args.join(" ").slice(1);   
     if(!role) return message.reply("Specify a role!");
-    let gRole = message.guild.roles.find(`name`, role);
+    let gRole = member.guild.roles.find(r => r.name === role);
     if(!gRole) return message.reply("Couldn't find that role.");
 
     if(raUser.roles.has(gRole.id)) return message.reply("They already have that role.");
