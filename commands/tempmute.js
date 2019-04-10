@@ -21,7 +21,7 @@ module.exports = {
             return;
         }
         let tmUser = message.mentions.members.first()
-        if(!tmUser) return message.reply("Can't find usermember.guild.roles.find(r => r.name === "Verifi");!");
+        if(!tmUser) return message.reply("Can't find user");
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");
         if(tmUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be muted!");
         let muterole = message.guild.roles.find(r => r.name === "muted");
