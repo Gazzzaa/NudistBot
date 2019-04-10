@@ -21,7 +21,7 @@ if(args[0] == "help"){
     .addField("Command: ","!8ball" )
     .addField(`Usage: `,module.exports.help.usage)
     .addField("Description: ", module.exports.help.description)
-    .addField("Aliases",,module.exports.help.aliases)
+    .addField("Aliases",module.exports.help.aliases)
     .setTimestamp();
     message.channel.send(Embed);
     return;
