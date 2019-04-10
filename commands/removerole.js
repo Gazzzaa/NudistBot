@@ -25,7 +25,7 @@ run: async (bot, message, args) => {
     if(!rrUser) return message.channel.send("Can't find user!");    
     let role = args.slice(1).join(" ");   
     if(!role) return message.reply("Specify a role!");
-    let gRole = message.guild.roles.find(r => r.name === role);
+    let gRole = message.guild.roles.filter(r => r.name !== "@everyone").find(r => r.name === role);
     if(!gRole) return message.reply("Couldn't find that role.");
 
     if(!rrUser.roles.has(gRole.id)) return message.reply("They don't have that role.");
