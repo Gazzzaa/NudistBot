@@ -22,9 +22,12 @@ if(args[0] == "help"){
     message.channel.send(Embed);
     return;
 }
- 
+    let pingEmbed = new Discord.RichEmbed()
+    .setColor("#FF0000")
+    .addTitle("Ping")
+    .setDescription("Pong! The ping is: " + Math.round(bot.ping));
     
-    message.channel.send("Pong!, The ping is: " + Math.round(bot.ping))
+    message.channel.send(pingEmbed)
   
 
 }
