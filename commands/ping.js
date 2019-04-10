@@ -19,6 +19,7 @@ if(args[0] == "help"){
     .addField("Command: ","!ping" )
     .addField(`Usage: `,module.exports.help.usage)
     .addField("Description: ", module.exports.help.description)
+    .addField("Aliases", module.exports.help.description)
     .setTimestamp();
     message.channel.send(Embed);
     return;

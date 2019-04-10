@@ -18,6 +18,7 @@ run: async (bot, message, args) => {
         .addField("Command: ","!help" )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
+        .addField("Aliases", module.exports.help.description)
         .setTimestamp();
         message.channel.send(Embed);
         return;

@@ -18,6 +18,7 @@ module.exports = {
             .addField("Command: ","!tempmute" )
             .addField(`Usage: `,module.exports.help.usage)
             .addField("Description: ", module.exports.help.description)
+            .addField("Aliases", module.exports.help.description)
             .setTimestamp();
             message.channel.send(Embed);
             return;
