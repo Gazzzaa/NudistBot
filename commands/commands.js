@@ -20,15 +20,16 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-    bot.commands.map(commands => commands.help.usage).join(" /n ");
-/*     let commandsEmbed = new Discord.RichEmbed()
-        .setColor("#FF0000")
-        .setTitle("Commands")
-        .setDescription("!help \n !commands \n !reactions \n !ping \n !botinfo \n !serverinfo \n !kick \n !ban \n !warn \n !warnings \n !tempmute \n !say \n !report \n !removerole \n !addrole \n !8ball")
-        .setFooter("Type help after any command to get help, e.g !commands help")
- */        
+     let commandsEmbed = new Discord.RichEmbed()
+        .setDescription(bot.commands.map(commands => commands.help.usage).join(" /n "));
+     
+        //.setColor("#FF0000")
+        //.setTitle("Commands")
+        //.setDescription("!help \n !commands \n !reactions \n !ping \n !botinfo \n !serverinfo \n !kick \n !ban \n !warn \n !warnings \n !tempmute \n !say \n !report \n !removerole \n !addrole \n !8ball")
+        //.setFooter("Type help after any command to get help, e.g !commands help")
+         
         
-    message.channel.send(commands.help.usage);
+    message.channel.send(commandsEmbed);
     return;
     
     
