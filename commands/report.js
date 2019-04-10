@@ -18,7 +18,7 @@ run: async (bot, message, args) => {
         .addField("Command: ","!report" )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
-        .addField("Aliases", module.exports.help.aliases)
+        .addField("Aliases","!",module.exports.help.aliases)
         .setTimestamp();
         message.channel.send(Embed);
         return;
