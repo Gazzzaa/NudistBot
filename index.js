@@ -21,7 +21,7 @@ jsfile.forEach((f, i) =>{
   console.log(`${f} loaded!`);
   bot.commands.set(props.help.name, props);
   props.help.aliases.forEach(alias =>{
-    bot.aliases.set(props.help.name)
+    bot.aliases.set(alias, props.help.name)
   });
   return;
 })})
