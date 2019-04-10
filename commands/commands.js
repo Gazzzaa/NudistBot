@@ -28,7 +28,7 @@ run: async (bot, message, args) => {
         .setFooter("Type help after any command to get help, e.g !commands help")
  */        
         
-    message.channel.send(bot.commands);
+    message.channel.send(commands);
     return;
     
     
