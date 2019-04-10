@@ -22,7 +22,7 @@ jsfile.forEach((f, i) =>{
   bot.commands.set(props.help.name, props);
   props.help.aliases.forEach(alias =>{
     bot.aliases.set(props.help.name)
-  })
+  });
   return;
 })})
 
