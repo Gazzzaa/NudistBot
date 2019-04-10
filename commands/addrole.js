@@ -39,7 +39,7 @@ run: async (bot, message, args) => {
     .setTitle("Added Role")
     .setDescription("Addeed Role", gRole)
     .setDescription("Username", raUser)
-    .addField("Roles: ", member.roles.map(roles => `${roles.name}`).join(", "));
+    .addField("Roles: ", message.roles.map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
    // message.channel.send(`${raUser} has been given the role ${gRole.name}`);
 
