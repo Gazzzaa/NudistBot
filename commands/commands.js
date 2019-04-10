@@ -18,6 +18,7 @@ run: async (bot, message, args) => {
         .addField("Command: ", module.exports.help.command)
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
+        .addField("Aliases", module.exports.help.description)
         .setTimestamp();
         message.channel.send(Embed);
         return;
@@ -25,10 +26,7 @@ run: async (bot, message, args) => {
      let commandsEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .setTitle("Commands")
-        .addField('Inline field Aliases', 'Some value here', false)
-        .setTitle("Aliases")
         .setDescription(bot.commands.map(commands => commands.help.command).join(` \n ` ))
-        //.addField("Command: ", module.exports.help.command)
         .setFooter("Type help after any command to get help, e.g !commands help");
          
         
