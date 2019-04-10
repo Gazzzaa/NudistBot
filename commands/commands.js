@@ -20,7 +20,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-    bot.commands.map(commands => commands.usage.name).join(" /n ");
+    bot.commands.map(commands => commands.help.usage).join(" /n ");
 /*     let commandsEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .setTitle("Commands")
