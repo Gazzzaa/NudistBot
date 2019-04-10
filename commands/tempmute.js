@@ -57,7 +57,7 @@ module.exports = {
             .setColor("#e56b00")
             .addField("Muted member", `${tmUser}`)
             .addField("Muted by", `${message.author}`)
-            .addField("Time", args[0])
+            .addField("Time", mutetime)
             .setTimestamp();
 
             const channel = message.guild.channels.find(c => c.name === "nudistbottesting");
