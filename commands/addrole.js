@@ -37,7 +37,7 @@ run: async (bot, message, args) => {
     await(raUser.addRole(gRole.id));
     let roleEmbed = new Discord.RichEmbed()
     .setColor("#ff0000")
-    .addField("Addeed Role", gRole)
+    .addField("Added Role", gRole)
     .addField("To User", raUser)
     .addField("Roles: ", member.roles.filter(r => r.name !== "@everyone").map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
