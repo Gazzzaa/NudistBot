@@ -35,11 +35,11 @@ run: async (bot, message, args) => {
     const member = message.guild.member(raUser);
     if(raUser.roles.has(gRole.id)) return message.reply("They already have that role.");
     await(raUser.addRole(gRole.id));
-    
+    let exRole = "everyone";
     let roleEmbed = new Discord.RichEmbed()
     .addField("Addeed Role", gRole)
     .addField("Username", raUser)
-    .addField("Roles: ", member.roles.filter("everyone").map(roles => `${roles.name}`).join(", "));
+    .addField("Roles: ", member.roles.filter(exRole => exRole.name).map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
    // message.channel.send(`${raUser} has been given the role ${gRole.name}`);
 
