@@ -6,7 +6,7 @@ module.exports = {
         description: "Deletes messages",
         usage: "!prune <amount>",
         command: "!prune",
-        aliases: "",
+        aliases: [""],
     },
 
 run: async (bot, message, args) => {

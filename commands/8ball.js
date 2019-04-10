@@ -6,7 +6,7 @@ module.exports = {
         description: "Answers a question",
         usage: "!8ball <question>",
         command: "!8ball",
-        aliases: "",
+        aliases: [""],
     },
 
 run: async (bot, message, args) => {

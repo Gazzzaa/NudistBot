@@ -5,7 +5,7 @@ module.exports = {
         description: "Outputs list of reactions",
         usage: "!reactions",
         command: "!reactions",
-        aliases: "",
+        aliases: [""],
     },
 
 run: async (bot, message, args) => {

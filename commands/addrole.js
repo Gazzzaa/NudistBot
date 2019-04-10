@@ -7,7 +7,7 @@ module.exports = {
         usage: "!addrole <user> <role> ",
         description: "Adds a role to a user",
         command: "!addrole",
-        aliases: "",
+        aliases: [""],
     },
 
 run: async (bot, message, args) => {
