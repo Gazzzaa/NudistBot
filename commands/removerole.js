@@ -6,7 +6,7 @@ module.exports = {
         description: "Removes a role from a user",
         usage: "!removerole <user> <role>",
         command: "!removerole",
-        aliases: [""],
+        aliases: ["rr"],
     },
 
 run: async (bot, message, args) => {
