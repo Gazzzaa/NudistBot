@@ -5,6 +5,7 @@ module.exports = {
         description: "Outputs list of commands",
         usage: "!commands",
         command: "!commands", 
+        aliases: "cmds",
     },
 
 run: async (bot, message, args) => {
