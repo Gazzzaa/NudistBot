@@ -24,7 +24,7 @@ if(args[0] == "help"){
 }
  
     
-    message.channel.send(`Pong!, The ping is: `,bot.ping)
+    message.channel.send("Pong!, The ping is: ",(bot.ping))
   
 
 }
