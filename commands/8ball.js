@@ -25,8 +25,9 @@ if(args[0] == "help"){
 }
  if(args[0] == "replies"){
     let repliesEmbed = new Discord.RichEmbed()
-    .setTitle("_8Ball Replies List_")
-    .setDescription("Yes \n No \n I don't know \n Maybe \n Ask me again later \n It is certain \n Without a doubt \n As I see it, yes \n Most likelyCannot predict now \n Concentrate and ask again \n Don’t count on it \n Very doubtful \n My sources say no");
+    .setColor("#ff0000")
+    .setTitle("___8Ball Replies List___")
+    .setDescription("Yes \n No \n I don't know \n Maybe \n Ask me again later \n It is certain \n Without a doubt \n As I see it, yes \n Most likely \n Cannot predict now \n Concentrate and ask again \n Don’t count on it \n Very doubtful \n My sources say no");
     message.channel.send(repliesEmbed);
     return;
 }
