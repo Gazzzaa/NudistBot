@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const errors = require("../utils/errors.js");
+const moment = require("moment");
 module.exports = {
     help: {
         name: "addrole",
@@ -31,7 +32,7 @@ run: async (bot, message, args) => {
     if(!role) return message.reply("Specify a role!");
     let gRole = message.guild.roles.find(r => r.name === role);
     if(!gRole) return message.reply("Couldn't find that role.");
-
+    const member = message.guild.member(raUser);
     if(raUser.roles.has(gRole.id)) return message.reply("They already have that role.");
     await(raUser.addRole(gRole.id));
     
@@ -39,7 +40,7 @@ run: async (bot, message, args) => {
     .setTitle("Added Role")
     .setDescription("Addeed Role", gRole)
     .setDescription("Username", raUser)
-    .addField("Roles: ", message.roles.map(roles => `${roles.name}`).join(", "));
+    .addField("Roles: ", member.roles.map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
    // message.channel.send(`${raUser} has been given the role ${gRole.name}`);
 
