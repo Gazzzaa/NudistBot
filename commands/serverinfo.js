@@ -4,7 +4,8 @@ module.exports = {
     help: {
         name: "serverinfo",
         description: "Shows server information",
-        usage: "!serverinfo"
+        usage: "!serverinfo",
+        command: "!serverinfo",
     },
 
 run: async (bot, message, args) => {

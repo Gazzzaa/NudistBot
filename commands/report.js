@@ -4,7 +4,8 @@ module.exports = {
     help: {
         name: "report",
         description: "Reports a user",
-        usage: "!report <user> <reason>"
+        usage: "!report <user> <reason>",
+        command: "!report",
     },
 
 run: async (bot, message, args) => {

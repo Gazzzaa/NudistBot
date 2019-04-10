@@ -7,6 +7,7 @@ module.exports = {
         name: "userinfo",
         description: "Shows information about the user",
         usage: "!userinfo",
+        command: "!userinfo",
 
     },
 

@@ -3,7 +3,8 @@ module.exports = {
     help: {
         name: "reactions",
         description: "Outputs list of reactions",
-        usage: "!reactions", 
+        usage: "!reactions",
+        command: "!reactions", 
     },
 
 run: async (bot, message, args) => {

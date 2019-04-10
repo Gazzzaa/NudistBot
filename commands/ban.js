@@ -4,7 +4,8 @@ module.exports = {
     help: {
         name: "ban",
         description: "Bans a user from the server ",
-        usage: "!ban <user> <reason>"
+        usage: "!ban <user> <reason>",
+        command: "!ban",
     },
 
 run: async (bot, message, args) => {

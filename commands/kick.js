@@ -4,7 +4,8 @@ module.exports = {
     help: {
         name: "kick",
         description: "Kick a user from the server",
-        usage: "!kick <user> <reason>"
+        usage: "!kick <user> <reason>",
+        command: "!kick",
     }, 
 
 run: async (bot, message, args) => {

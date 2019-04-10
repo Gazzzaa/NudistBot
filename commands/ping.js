@@ -4,7 +4,8 @@ module.exports = {
     help: {
         name: "ping",
         description: "Shows ping",
-        usage: "!ping"
+        usage: "!ping",
+        command: "!ping",
     },
 
 run: async (bot, message, args) => {

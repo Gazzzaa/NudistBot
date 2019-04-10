@@ -5,7 +5,8 @@ module.exports = {
     help:{
     name: "tempmute",
     description: "Mutes user for a time period",
-    usage: "!tempmute <user> <10m>"
+    usage: "!tempmute <user> <10m>",
+    command: "!tempmute",
 },
     run: async (bot, message, args) => {
         if(args[0] == "help"){

@@ -4,7 +4,8 @@ module.exports = {
     help: {
         name: "8ball",
         description: "Answers a question",
-        usage: "!8ball <question>"
+        usage: "!8ball <question>",
+        command: "!8ball",
     },
 
 run: async (bot, message, args) => {

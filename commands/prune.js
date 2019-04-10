@@ -4,7 +4,8 @@ module.exports = {
     help: {
         name: "prune",
         description: "Deletes messages",
-        usage: "!prune <amount>"
+        usage: "!prune <amount>",
+        command: "!prune",
     },
 
 run: async (bot, message, args) => {

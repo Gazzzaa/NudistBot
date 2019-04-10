@@ -5,7 +5,8 @@ module.exports = {
     help: {
         name: "addrole",
         usage: "!addrole <user> <role> ",
-        description: "Adds a role to a user"
+        description: "Adds a role to a user",
+        command: "!addrole",
     },
 
 run: async (bot, message, args) => {
