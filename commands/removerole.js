@@ -31,8 +31,9 @@ run: async (bot, message, args) => {
     if(!rrUser.roles.has(gRole.id)) return message.reply("They don't have that role.");
     await(rrUser.removeRole(gRole.id));
     let roleEmbed = new Discord.RichEmbed()
+    .setColour("#ff0000")
     .addField("Removed Role", gRole)
-    .addField("Username", rrUser)
+    .addField("From User", rrUser)
     .addField("Roles: ", member.roles.filter(r => r.name !== "@everyone").map(roles => `${roles.name}`).join(", "));
     return message.channel.send(roleEmbed);
 
