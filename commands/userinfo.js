@@ -40,7 +40,7 @@ run: async (bot, message, args) => {
         .addField("ID: ", userinfo.id)
         .addField("Profile Created At: ", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
         .addField("Status: ", `${userinfo.presence.status}`)
-        .addField("Roles: ", member.roles.map(roles => `${roles.name}`).join(", "))
+        .addField("Roles: ", member.roles.filter(r => r.name !== "@everyone").map(roles => `${roles.name}`).join(", "))
         .setTimestamp();
     
         return message.channel.send(botembed);
