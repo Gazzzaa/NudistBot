@@ -62,7 +62,7 @@ module.exports = {
 
             const channel = message.guild.channels.find(c => c.name === "nudistbottesting");
             if (!channel) return message.reply("Couldn't find channel").then(m => m.delete(5000));
-            return channel.send(tmEmbed);
+            return channel.send(mEmbed);
            
     }
 }   
