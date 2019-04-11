@@ -18,7 +18,6 @@ if(jsfile.length <= 0){
 
 jsfile.forEach((f, i) =>{
   let props = require(`./commands/${f}`);
-  console.log(`${f} loaded!`);
   bot.commands.set(props.help.name, props);
   props.help.aliases.forEach(alias =>{
     bot.aliases.set(alias, props.help.name)
