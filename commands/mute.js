@@ -3,20 +3,20 @@ const ms = require("ms");
 const errors = require("../utils/errors.js");
 module.exports = {
     help:{
-    name: "tempmute",
+    name: "mute",
     description: "Mutes user for a time period",
-    usage: "!tempmute <user> <time>",
-    command: "!tempmute",
-    aliases: ["tmute"],
-    aliasname: "!tmute",
+    usage: "!mute <user>",
+    command: "!mute",
+    aliases: ["mute"],
+    aliasname: "!mute",
 },
     run: async (bot, message, args) => {
         if(args[0] == "help"){
 
             let Embed = new Discord.RichEmbed()
-            .setTitle("TempMute")
+            .setTitle("Mute")
             .setColor("#FF0000")
-            .addField("Command: ","!tempmute" )
+            .addField("Command: ","!mute" )
             .addField(`Usage: `,module.exports.help.usage)
             .addField("Description: ", module.exports.help.description)
             .addField("Aliases: ",module.exports.help.aliasname)
@@ -24,10 +24,10 @@ module.exports = {
             message.channel.send(Embed);
             return;
         }
-        let tmUser = message.mentions.members.first()
-        if(!tmUser) return message.reply("Can't find user");
+        let mUser = message.mentions.members.first()
+        if(!mUser) return message.reply("Can't find user");
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");
-        if(tmUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be muted!");
+        if(mUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be muted!");
         let muterole = message.guild.roles.find(r => r.name === "muted");
         if(!muterole){
             try{
@@ -46,25 +46,18 @@ module.exports = {
                 return message.reply("Couldn't find \"muted\" role, please create it.").then(m => m.delete(5000));
             }
         }
-            const mutetime = args[1];
-            if(args[1] == ""){
-                message.chanel.send("Enter a valid time, e.g. 10s, 10m, 10d");
-            }
+        
             
 
-            await tmUser.addRole(muterole);
-            message.reply(`${tmUser} has been muted for ${ms(mutetime)}`);
+            await mUser.addRole(muterole);
+            message.reply(`${mUser} has been muted!`);
         
-            setTimeout(() => {
-               tmUser.removeRole(muterole);
-               message.channel.send(`${tmUser} has been unmuted!`);
-            }, ms(mutetime));
 
-            const tmEmbed = new Discord.RichEmbed()
+            const mEmbed = new Discord.RichEmbed()
             .setColor("#e56b00")
-            .addField("Muted member", `${tmUser}`)
+            .addField("Muted member", `${mUser}`)
             .addField("Muted by", `${message.author}`)
-            .addField("Time", mutetime)
+            .addField("Time", "Forever")
             .setTimestamp();
 
             const channel = message.guild.channels.find(c => c.name === "nudistbottesting");
