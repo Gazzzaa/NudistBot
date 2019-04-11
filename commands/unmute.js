@@ -3,7 +3,7 @@ const ms = require("ms");
 const errors = require("../utils/errors.js");
 module.exports = {
     help:{
-    name: "mute",
+    name: "unmute",
     description: "Mutes user for a time period",
     usage: "!unmute <user>",
     command: "!unmute",
