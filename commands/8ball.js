@@ -7,6 +7,7 @@ module.exports = {
         usage: "!8ball <question>",
         command: "!8ball",
         aliases: [""],
+        aliasname: "",
     },
 
 run: async (bot, message, args) => {
@@ -21,7 +22,6 @@ if(args[0] == "help"){
     .addField("Command: ","!8ball" )
     .addField(`Usage: `,module.exports.help.usage)
     .addField("Description: ", module.exports.help.description)
-    .addField("Aliases",module.exports.help.aliases)
     .setTimestamp();
     message.channel.send(Embed);
     return;
