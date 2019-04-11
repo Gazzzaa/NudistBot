@@ -22,7 +22,7 @@ run: async (bot, message, args) => {
         .addField("Command: ","!addrole" )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
-        .addField("Aliases",module.exports.help.aliasname)
+        .addField("Aliases: ",module.exports.help.aliasname)
         .setTimestamp();
         message.channel.send(Embed);
         return;

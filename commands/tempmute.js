@@ -8,6 +8,7 @@ module.exports = {
     usage: "!tempmute <user> <10m>",
     command: "!tempmute",
     aliases: ["tmute"],
+    aliasname: "!tmute",
 },
     run: async (bot, message, args) => {
         if(args[0] == "help"){
@@ -18,7 +19,7 @@ module.exports = {
             .addField("Command: ","!tempmute" )
             .addField(`Usage: `,module.exports.help.usage)
             .addField("Description: ", module.exports.help.description)
-            .addField("Aliases",module.exports.help.aliases)
+            .addField("Aliases: ",module.exports.help.aliasname)
             .setTimestamp();
             message.channel.send(Embed);
             return;

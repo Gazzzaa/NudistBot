@@ -8,6 +8,7 @@ module.exports = {
         usage: "!botinfo",
         command: "!botinfo",
         aliases: ["binfo"],
+        aliasname: "!binfo",
 
     },
 
@@ -21,7 +22,7 @@ run: async (bot, message, args) => {
         .addField("Command: ","!botinfo" )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
-        .addField("Aliases",module.exports.help.aliases)
+        .addField("Aliases: ",module.exports.help.aliasname)
         .setTimestamp();
         message.channel.send(Embed);
         return;

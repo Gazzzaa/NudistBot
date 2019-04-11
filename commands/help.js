@@ -5,7 +5,8 @@ module.exports = {
         description: "Use !commands to get lists of commands.\n To find help on a command write help after it, e.g !addrole help",
         usage: "!help",
         command: "!help",
-        aliases: ["h","halp"], 
+        aliases: ["h","halp",],
+        aliasname: "!h, !halp",
     },
 
 run: async (bot, message, args) => {
@@ -18,7 +19,7 @@ run: async (bot, message, args) => {
         .addField("Command: ","!help" )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
-        .addField("Aliases",module.exports.help.aliases)
+        .addField("Aliases: ",module.exports.help.aliasname)
         .setTimestamp();
         message.channel.send(Embed);
         return;
