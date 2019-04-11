@@ -38,7 +38,6 @@ fs.readdir("./commands/reactions/", (err, files) =>{
   
   jsfile.forEach((f, i) =>{
     let props = require(`./commands/reactions/${f}`);
-    console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
     return;
   })})
