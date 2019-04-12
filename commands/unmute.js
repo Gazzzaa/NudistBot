@@ -22,7 +22,7 @@ module.exports = {
             message.channel.send(Embed);
             return;
         }
-        let mUser = message.mentions.members.first()
+        let mUser = message.mentions.members.first();
         if(!mUser) return message.reply("Can't find user");
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");
         if(mUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be unmuted!");
