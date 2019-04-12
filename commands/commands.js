@@ -6,6 +6,7 @@ module.exports = {
         usage: "!commands",
         command: "!commands", 
         aliases: ["cmds"],
+        aliasnames: "!cmds",
     },
 
 run: async (bot, message, args) => {
@@ -18,7 +19,7 @@ run: async (bot, message, args) => {
         .addField("Command: ", module.exports.help.command)
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
-        .addField("Aliases", module.exports.help.aliases)
+        .addField("Aliases: ", module.exports.help.aliasnames)
         .setTimestamp();
         message.channel.send(Embed);
         return;
