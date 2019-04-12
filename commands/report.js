@@ -23,7 +23,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-    let rUser = message.mentions.members.first()
+    let rUser = message.mentions.members.first();
     if(!rUser) return message.channel.send("Couldnt find user.");
     let reason = args.slice(1).join(" ");
     

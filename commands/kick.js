@@ -24,7 +24,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-        let kUser = message.mentions.members.first()
+        let kUser = message.mentions.members.first();
         if(!kUser) return message.channel.send("Can't find user!");
         let kReason = args.join(" ").slice(1);
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");
