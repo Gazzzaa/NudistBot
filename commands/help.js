@@ -5,7 +5,7 @@ module.exports = {
         description: "Use !commands to get lists of commands.\n To find help on a command write help after a command, e.g !addrole help",
         usage: "!help",
         command: "!help",
-        aliases: ["h","halp",],
+        aliases: ["h","halp"],
         aliasname: "!h, !halp",
     },
 
