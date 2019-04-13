@@ -26,7 +26,7 @@ run: async (bot, message, args) => {
         .setTimestamp();
         message.channel.send(Embed);
         return;
-    }else message.channel.send("Enter a channel name") & args[0] == channelname;
+    }else args[0] == channelname;
     
         let channelname;
         channel.setName(channelname);
