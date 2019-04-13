@@ -30,7 +30,7 @@ run: async (bot, message, args) => {
         
         
         message.channel.setName(channelname);
-        message.channel.send(`This channel name has been changed to `, channelname);    
+        message.channel.send(`This channel name has been changed to ` + channelname);    
 
 
       
