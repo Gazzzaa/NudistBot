@@ -28,7 +28,7 @@ run: async (bot, message, args) => {
         return;
     }
         message.channel.fetchMessage(`565503319641030657`)
-        .then(message.channel.send(message.content));
+        .then(message => message.channel.send(message.content));
        
       
     
