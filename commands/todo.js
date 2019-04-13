@@ -27,8 +27,8 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-        message.channel.fetchMessage(`565503319641030657`);
-        message.channel.send(message.content);
+        message.channel.fetchMessage(`565503319641030657`)
+        .then(message.channel.send(message.content));
        
       
     
