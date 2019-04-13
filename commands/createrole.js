@@ -30,8 +30,9 @@ run: async (bot, message, args) => {
     }else rolename = args[0]
 
         if(!rolename){
-            message.reply("Enter a role name!")
+            message.reply("Enter a role name!");
         }
+        else{
         let roleEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .addField("__New Role Name__ ",rolename)
@@ -43,7 +44,7 @@ run: async (bot, message, args) => {
             color: rolecolor,
         });
         message.channel.send(roleEmbed);    
-
+        }
 
       
     
