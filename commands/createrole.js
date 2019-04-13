@@ -33,9 +33,10 @@ run: async (bot, message, args) => {
         message.reply("Enter a role name!");
         }
         else if (!args[1]){
-
-            message.reply("Enter a valid color!")
-            message.channel.send("DEFAULT, AQUA, GREEN, BLUE, PURPLE, LUMINOUS_VIVID_PINK, GOLD, ORANGE, RED, GREY, DARKER_GREY, NAVY, DARK_AQUA, DARK_GREEN, DARK_BLUE, DARK_PURPLE, DARK_VIVID_PINK, DARK_GOLD, DARK_ORANGE, DARK_RED, DARK_GREY, LIGHT_GREY, DARK_NAVY, RANDOM");
+            let rolecolorEmbed = new Discord.RichEmbed()
+            .setDescription("Enter a valid color!")
+            .addField("Colors","DEFAULT, AQUA, GREEN, BLUE, PURPLE, LUMINOUS_VIVID_PINK, GOLD, ORANGE, RED, GREY, DARKER_GREY, NAVY, DARK_AQUA, DARK_GREEN, DARK_BLUE, DARK_PURPLE, DARK_VIVID_PINK, DARK_GOLD, DARK_ORANGE, DARK_RED, DARK_GREY, LIGHT_GREY, DARK_NAVY, RANDOM" );
+            message.channel.send(rolecolorEmbed);
         }
         
         else{
