@@ -34,7 +34,7 @@ run: async (bot, message, args) => {
         }
         else if (!args[1]){
 
-            message.channel.send("Enter a valid color! \n DEFAULT \n AQUA \n GREEN \n BLUE \n PURPLE \n LUMINOUS_VIVID_PINK \n GOLD \n ORANGE \n RED \n GREY \n DARKER_GREY \n NAVY \n DARK_AQUA \n DARK_GREEN \n DARK_BLUE \n DARK_PURPLE \n DARK_VIVID_PINK \n DARK_GOLD \n DARK_ORANGE \n DARK_RED \n DARK_GREY \n LIGHT_GREY \n DARK_NAVY \n RANDOM")
+            message.reply("Enter a valid color! \n DEFAULT, AQUA, GREEN, BLUE, PURPLE, LUMINOUS_VIVID_PINK, GOLD, ORANGE, RED, GREY, DARKER_GREY, NAVY, DARK_AQUA, DARK_GREEN, DARK_BLUE, DARK_PURPLE, DARK_VIVID_PINK, DARK_GOLD, DARK_ORANGE, DARK_RED, DARK_GREY, LIGHT_GREY, DARK_NAVY, RANDOM")
         }
         
         else{
