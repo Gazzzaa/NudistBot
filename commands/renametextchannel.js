@@ -13,7 +13,7 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-    
+    let channelname;
     if(args[0] == "help"){
 
         let Embed = new Discord.RichEmbed()
@@ -27,7 +27,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }else args[0] = channelname;
-        let channelname;
+        
         
         message.channel.setName(channelname);
         message.channel.send("This channel name has been chnaged to ", channelname);
