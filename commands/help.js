@@ -11,7 +11,7 @@ module.exports = {
 
 run: async (bot, message, args) => {
     
-    if(args[0] === "help"){
+    if(args[0] == "help"){
 
         let Embed = new Discord.RichEmbed()
         .setTitle("Help")
