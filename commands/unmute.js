@@ -4,16 +4,16 @@ const errors = require("../utils/errors.js");
 module.exports = {
     help:{
     name: "unmute",
-    description: "Mutes user for a time period",
+    description: "Unmutes user",
     usage: "!unmute <user>",
     command: "!unmute",
-    aliases: [""],
+    aliases: [],
 },
     run: async (bot, message, args) => {
         if(args[0] == "help"){
 
             let Embed = new Discord.RichEmbed()
-            .setTitle("Mute")
+            .setTitle("unmute")
             .setColor("#FF0000")
             .addField("Command: ","!unmute" )
             .addField(`Usage: `,module.exports.help.usage)

@@ -6,7 +6,7 @@ module.exports = {
         description: "Bans a user from the server ",
         usage: "!ban <user> <reason>",
         command: "!ban",
-        aliases: [""],
+        aliases: [],
     },
 
 run: async (bot, message, args) => {

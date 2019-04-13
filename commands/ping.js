@@ -6,7 +6,7 @@ module.exports = {
         description: "Shows ping",
         usage: "!ping",
         command: "!ping",
-        aliases: [""],
+        aliases: [],
     },
 
 run: async (bot, message, args) => {
