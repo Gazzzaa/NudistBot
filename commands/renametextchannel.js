@@ -28,9 +28,9 @@ run: async (bot, message, args) => {
         return;
     }else channelname = args[0];
         
-        
+        message.channel.send("This channel name has been changed to ", channelname);
         message.channel.setName(channelname);
-        message.channel.send("This channel name has been chnaged to ", channelname);
+        
 
 
       
