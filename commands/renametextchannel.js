@@ -30,7 +30,7 @@ run: async (bot, message, args) => {
 
         let channelEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
-        .addField("New channel name: ",channelname)
+        .addField("New Channel Name: ",channelname)
         .addField("Changed by: ", message.author)
         .setTimestamp();
         
