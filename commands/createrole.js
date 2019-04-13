@@ -28,7 +28,10 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }else rolename = args[0]
+        if(rolecolor == ""){
 
+            message.channel.send("Enter a valid color! \n DEFAULT \n AQUA \n GREEN \n BLUE \n PURPLE \n LUMINOUS_VIVID_PINK \n GOLD \n ORANGE \n RED \n GREY \n DARKER_GREY \n NAVY \n DARK_AQUA \n DARK_GREEN \n DARK_BLUE \n DARK_PURPLE \n DARK_VIVID_PINK \n DARK_GOLD \n DARK_ORANGE \n DARK_RED \n DARK_GREY \n LIGHT_GREY \n DARK_NAVY \n RANDOM")
+        }
         if(!rolename){
             message.reply("Enter a role name!");
         }
