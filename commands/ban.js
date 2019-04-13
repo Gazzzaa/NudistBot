@@ -24,7 +24,7 @@ run: async (bot, message, args) => {
     }
 
         let bUser = message.mentions.members.first();
-        if(!bUser) return message.channel.send("Can't find user!");
+        if(!bUser) return message.channel.send("Can't find user - ban!");
         let bReason = args.join(" ").slice(1);
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");
         if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be banned!");
