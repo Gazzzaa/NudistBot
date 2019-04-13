@@ -28,6 +28,7 @@ run: async (bot, message, args) => {
         return;
     }
         message.channel.fetchMessage(`565503319641030657`);
+        message.channel.send(message.content);
        
       
     
