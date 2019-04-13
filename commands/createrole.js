@@ -27,8 +27,11 @@ run: async (bot, message, args) => {
         .setTimestamp();
         message.channel.send(Embed);
         return;
-    }else rolename = args[0];
+    }else rolename = args[0]
 
+        if(!rolename){
+            message.reply("Enter a role name!")
+        }
         let roleEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .addField("__New Role Name__ ",rolename)
