@@ -19,7 +19,7 @@ if(args[0] == "help"){
     let Embed = new Discord.RichEmbed()
     .setTitle("8Ball")
     .setColor("#FF0000")
-    .addField("Command: ","!8ball" )
+    .addField("Command: ", module.exports.help.command)
     .addField(`Usage: `,module.exports.help.usage)
     .addField("Description: ", module.exports.help.description)
     .setTimestamp();
