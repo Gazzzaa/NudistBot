@@ -29,7 +29,7 @@ run: async (bot, message, args) => {
     }else args[0] == channelname;
     
         
-        channel.setName(channelname);
+        message.channel.setName(channelname);
         message.channel.send("This channel name has been chnaged to ", channelname);
 
 
