@@ -27,7 +27,12 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }else channelname = args[0];
-        
+
+        let channelEmbed = new Discord.RichEmbed()
+        .setColor("#FF0000")
+        .addField("New channel name: ",channelname)
+        .addField("Changed by: ", message.author)
+        .setTimestamp();
         
         message.channel.setName(channelname);
         message.channel.send(`This channel name has been changed to ` + channelname);    
