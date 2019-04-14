@@ -34,7 +34,8 @@ run: async (bot, message, args) => {
         }
         else if (!args[1]){
             let rolecolorEmbed = new Discord.RichEmbed()
-            .setDescription("Enter a valid color!")
+            .setTitle("Enter a valid color!")
+            .setColor("#FF0000")
             .addField("Colors","DEFAULT, AQUA, GREEN, BLUE, PURPLE, LUMINOUS_VIVID_PINK, GOLD, ORANGE, RED, GREY, DARKER_GREY, NAVY, DARK_AQUA, DARK_GREEN, DARK_BLUE, DARK_PURPLE, DARK_VIVID_PINK, DARK_GOLD, DARK_ORANGE, DARK_RED, DARK_GREY, LIGHT_GREY, DARK_NAVY, RANDOM" );
             message.channel.send(rolecolorEmbed);
         }
