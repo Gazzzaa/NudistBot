@@ -44,6 +44,7 @@ run: async (bot, message, args) => {
         else{
         let roleEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
+        .addField("__Role__", `@${rolename}`)
         .addField("__New Role Color__ ",rolecolor)
         .addField("__Created By__", message.author)
         .setTimestamp();
