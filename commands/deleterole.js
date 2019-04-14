@@ -40,7 +40,7 @@ run: async (bot, message, args) => {
         .addField("__Deleted By__", message.author)
         .setTimestamp();
         
-        message.guild.deleteRole({
+        message.role.delete({
             name: rolename,
         });
         message.channel.send(roleEmbed);    
