@@ -28,7 +28,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }else rolename = args[0]
-    
+        if(!message.member.hasPermission("MANAGE_ROLES")) return errors.noPerms(message, "MANAGE_ROLES");
         if(!rolename){
         message.reply("Enter a role name!");
         }
