@@ -36,7 +36,8 @@ run: async (bot, message, args) => {
             let rolecolorEmbed = new Discord.RichEmbed()
             .setTitle("Enter a valid color!")
             .setColor("#FF0000")
-            .addField("Colors","DEFAULT, AQUA, GREEN, BLUE, PURPLE, LUMINOUS_VIVID_PINK, GOLD, ORANGE, RED, GREY, DARKER_GREY, NAVY, DARK_AQUA, DARK_GREEN, DARK_BLUE, DARK_PURPLE, DARK_VIVID_PINK, DARK_GOLD, DARK_ORANGE, DARK_RED, DARK_GREY, LIGHT_GREY, DARK_NAVY, RANDOM" );
+            .addField("Colors","DEFAULT, AQUA, GREEN, BLUE, PURPLE, LUMINOUS_VIVID_PINK, GOLD, ORANGE, RED, GREY, DARKER_GREY, NAVY, DARK_AQUA, DARK_GREEN, DARK_BLUE, DARK_PURPLE, DARK_VIVID_PINK, DARK_GOLD, DARK_ORANGE, DARK_RED, DARK_GREY, LIGHT_GREY, DARK_NAVY" )
+            .setFooter("Additionally you can use a hex value");            
             message.channel.send(rolecolorEmbed);
         }
         
@@ -44,6 +45,7 @@ run: async (bot, message, args) => {
         let roleEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .addField("__New Role Name__ ",rolename)
+        .addField("Role Color",rolecolor)
         .addField("__Created By__", message.author)
         .setTimestamp();
         
