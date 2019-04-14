@@ -34,7 +34,7 @@ run: async (bot, message, args) => {
         }
         
         else{
-        let members = message.mentions.members.first();
+        let members = guild.members();
         let rc = message.guild.roles.find(rc => rc.name === rolename)
         let roleEmbed = new Discord.RichEmbed()
         .addField("__Role__",`${rc}`)
