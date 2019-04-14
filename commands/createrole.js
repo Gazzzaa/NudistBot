@@ -18,7 +18,7 @@ run: async (bot, message, args) => {
     if(args[0] == "help"){
 
         let Embed = new Discord.RichEmbed()
-        .setTitle("CReate Role")
+        .setTitle("Create Role")
         .setColor("#FF0000")
         .addField("Command: ","!createrole" )
         .addField(`Usage: `,module.exports.help.usage)
