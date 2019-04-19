@@ -32,7 +32,7 @@ run: async (bot, message, args) => {
     }else title = args[0]
     if(!args[1]){
         message.channel.send("Enter a message");
-    }else msg = args.join(" ");
+    }else msg = args.slice(1).join(" ");
 
         let sayEmbed = new Discord.RichEmbed()
         .setTitle(title)
