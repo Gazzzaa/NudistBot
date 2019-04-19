@@ -25,8 +25,8 @@ run: async (bot, message, args) => {
     .setTimestamp();
     message.channel.send(Embed);
     return;
-    }else channeltopic = args[0].join(" ")
-
+    }else let channeltopic = args.join(" ");
+    
      let channelEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .addField("New Channel Topic ",channeltopic)
