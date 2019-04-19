@@ -25,7 +25,7 @@ run: async (bot, message, args) => {
     .setTimestamp();
     message.channel.send(Embed);
     return;
-    }else let channeltopic = args.join(" ");
+    }else channeltopic = args.join(" ");
     
      let channelEmbed = new Discord.RichEmbed()
         .setColor("#FF0000")
