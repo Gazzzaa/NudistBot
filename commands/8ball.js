@@ -4,8 +4,8 @@ module.exports = {
     help: {
         name: "8ball",
         description: "Answers a question",
-        usage: "!8ball <question>",
-        command: "  !8ball",
+        usage: ".8ball <question>",
+        command: ".8ball",
         aliases: [],
         aliasname: "",
     },

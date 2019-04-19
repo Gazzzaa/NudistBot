@@ -5,10 +5,10 @@ module.exports = {
     help: {
         name: "setrolecolor",
         description: "Sets a roles color",
-        usage: "!setrolecolor <name> <color>",
-        command: "!setrolecolor",
+        usage: ".setrolecolor <name> <color>",
+        command: ".setrolecolor",
         aliases: ["src"],
-        aliasname: "!src",
+        aliasname: ".src",
 
     },
 
@@ -20,7 +20,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Role Color")
         .setColor("#FF0000")
-        .addField("Command: ","!setrolecolor" )
+        .addField("Command: ",module.exports.help.command)
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .addField("Aliases: ",module.exports.help.aliasname)

@@ -4,11 +4,11 @@ const moment = require("moment");
 module.exports = {
     help: {
         name: "addrole",
-        usage: "!addrole <user> <role> ",
+        usage: ".addrole <user> <role> ",
         description: "Adds a role to a user",
-        command: "!addrole",
+        command: ".addrole",
         aliases: ["ar"],
-        aliasname: "!ar",
+        aliasname: ".ar",
     },
 
 run: async (bot, message, args) => {
@@ -19,7 +19,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Add Role")
         .setColor("#FF0000")
-        .addField("Command: ","!addrole" )
+        .addField("Command: ",module.exports.help.command)
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .addField("Aliases: ",module.exports.help.aliasname)

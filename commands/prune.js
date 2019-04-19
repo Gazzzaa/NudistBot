@@ -4,8 +4,8 @@ module.exports = {
     help: {
         name: "prune",
         description: "Deletes messages",
-        usage: "!prune <amount>",
-        command: "!prune",
+        usage: ".prune <amount>",
+        command: ".prune",
         aliases: [],
     },
 
@@ -16,7 +16,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Prune")
         .setColor("#FF0000")
-        .addField("Command: ","!prune" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .setTimestamp();

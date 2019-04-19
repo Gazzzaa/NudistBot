@@ -5,10 +5,10 @@ module.exports = {
     help: {
         name: "inrole",
         description: "Shows members in role",
-        usage: "!inrole <role>",
-        command: "!inrole",
+        usage: ".inrole <role>",
+        command: ".inrole",
         aliases: ["ir"],
-        aliasname: "!ir",
+        aliasname: ".ir",
 
     },
 
@@ -20,7 +20,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("In Role")
         .setColor("#FF0000")
-        .addField("Command: ","!inrole" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .addField("Aliases: ",module.exports.help.aliasname)

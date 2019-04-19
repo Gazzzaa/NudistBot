@@ -6,10 +6,10 @@ module.exports = {
     help: {
         name: "userinfo",
         description: "Shows information about the user",
-        usage: "!userinfo",
-        command: "!userinfo",
+        usage: ".userinfo",
+        command: ".userinfo",
         aliases: ["uinfo"],
-        aliasname: "!uinfo",
+        aliasname: ".uinfo",
 
     },
 
@@ -20,7 +20,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("User Information")
         .setColor("#FF0000")
-        .addField("Command: ","!userinfo" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .addField("Aliases: ",module.exports.help.aliasname)

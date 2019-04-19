@@ -3,10 +3,10 @@ module.exports = {
     help: {
         name: "help",
         description: "Use !commands to get lists of commands.\n To find help on a command write help after a command, e.g !addrole help",
-        usage: "!help",
-        command: "!help",
+        usage: ".help",
+        command: ".help",
         aliases: ["h","halp"],
-        aliasname: "!h, !halp",
+        aliasname: ".h, .halp",
     },
 
 run: async (bot, message, args) => {
@@ -16,7 +16,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Help")
         .setColor("#FF0000")
-        .addField("Command: ","!help" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .addField("Aliases: ",module.exports.help.aliasname)
@@ -27,7 +27,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("***Help***")
         .setColor("#FF0000")
-        .addField("Command: ","!help" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .setTimestamp();

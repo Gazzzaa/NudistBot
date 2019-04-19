@@ -5,10 +5,10 @@ module.exports = {
     help: {
         name: "settopic",
         description: "Sets the channel topic",
-        usage: "!settopic",
-        command: "!settopic",
-        aliases: [],
-        aliasname: "st",
+        usage: ".settopic",
+        command: ".settopic",
+        aliases: ["st"],
+        aliasname: ".st",
 
     },
 
@@ -18,7 +18,7 @@ run: async (bot, message, args) => {
     let Embed = new Discord.RichEmbed()
     .setTitle("Set Topic")
     .setColor("#FF0000")
-    .addField("Command: ","!settopic" )
+    .addField("Command: ",module.exports.help.command )
     .addField(`Usage: `,module.exports.help.usage)
     .addField("Description: ", module.exports.help.description)
     .addField("Aliases: ",module.exports.help.aliasname)

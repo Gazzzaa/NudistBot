@@ -5,8 +5,8 @@ module.exports = {
     help:{
     name: "unmute",
     description: "Unmutes user",
-    usage: "!unmute <user>",
-    command: "!unmute",
+    usage: ".unmute <user>",
+    command: ".unmute",
     aliases: [],
 },
     run: async (bot, message, args) => {
@@ -15,7 +15,7 @@ module.exports = {
             let Embed = new Discord.RichEmbed()
             .setTitle("unmute")
             .setColor("#FF0000")
-            .addField("Command: ","!unmute" )
+            .addField("Command: ",module.exports.help.command )
             .addField(`Usage: `,module.exports.help.usage)
             .addField("Description: ", module.exports.help.description)
             .setTimestamp();

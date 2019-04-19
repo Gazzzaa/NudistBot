@@ -4,10 +4,10 @@ module.exports = {
     help: {
         name: "say",
         description: "Sends a message",
-        usage: "!say <message>",
-        command: "!say",
+        usage: ".say <message>",
+        command: ".say",
         aliases: ["speak"],
-        aliasname: "!speak",
+        aliasname: ".speak",
     },
 
 run: async (bot, message, args) => {
@@ -17,7 +17,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Say")
         .setColor("#FF0000")
-        .addField("Command: ","!say" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .addField("Aliases: ",module.exports.help.aliasname)

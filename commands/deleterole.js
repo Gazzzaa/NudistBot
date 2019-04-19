@@ -5,10 +5,10 @@ module.exports = {
     help: {
         name: "deleterole",
         description: "Deletes a role",
-        usage: "!deleterole <name>",
-        command: "!deleterole",
+        usage: ".deleterole <name>",
+        command: ".deleterole",
         aliases: ["dr"],
-        aliasname: "!dr",
+        aliasname: ".dr",
 
     },
 
@@ -20,7 +20,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Delete Role")
         .setColor("#FF0000")
-        .addField("Command: ","!deleterole" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .addField("Aliases: ",module.exports.help.aliasname)

@@ -4,8 +4,8 @@ module.exports = {
     help: {
         name: "ping",
         description: "Shows ping",
-        usage: "!ping",
-        command: "!ping",
+        usage: ".ping",
+        command: ".ping",
         aliases: [],
     },
 
@@ -16,7 +16,7 @@ if(args[0] == "help"){
     let Embed = new Discord.RichEmbed()
     .setTitle("Ping")
     .setColor("#FF0000")
-    .addField("Command: ","!ping" )
+    .addField("Command: ",module.exports.help.command )
     .addField(`Usage: `,module.exports.help.usage)
     .addField("Description: ", module.exports.help.description)
     .setTimestamp();

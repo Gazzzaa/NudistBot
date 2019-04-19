@@ -4,8 +4,8 @@ module.exports = {
     help: {
         name: "ban",
         description: "Bans a user from the server ",
-        usage: "!ban <user> <reason>",
-        command: "!ban",
+        usage: ".ban <user> <reason>",
+        command: ".ban",
         aliases: [],
     },
 
@@ -15,7 +15,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Ban")
         .setColor("#FF0000")
-        .addField("Command: ","!ban" )
+        .addField("Command: ",module.exports.help.command)
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .setTimestamp();

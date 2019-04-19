@@ -3,8 +3,8 @@ module.exports = {
     help: {
         name: "reactions",
         description: "Outputs list of reactions",
-        usage: "!reactions",
-        command: "!reactions",
+        usage: ".reactions",
+        command: ".reactions",
         aliases: [],
     },
 
@@ -15,7 +15,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Reactions")
         .setColor("#FF0000")
-        .addField("Command: ","!reactions" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .setTimestamp();

@@ -5,10 +5,10 @@ module.exports = {
     help:{
     name: "tempmute",
     description: "Mutes user for a time period",
-    usage: "!tempmute <user> <time>",
-    command: "!tempmute",
+    usage: ".tempmute <user> <time>",
+    command: ".tempmute",
     aliases: ["tmute"],
-    aliasname: "!tmute",
+    aliasname: ".tmute",
 },
     run: async (bot, message, args) => {
         if(args[0] == "help"){
@@ -16,7 +16,7 @@ module.exports = {
             let Embed = new Discord.RichEmbed()
             .setTitle("TempMute")
             .setColor("#FF0000")
-            .addField("Command: ","!tempmute" )
+            .addField("Command: ",module.exports.help.command )
             .addField(`Usage: `,module.exports.help.usage)
             .addField("Description: ", module.exports.help.description)
             .addField("Aliases: ",module.exports.help.aliasname)

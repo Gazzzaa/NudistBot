@@ -4,8 +4,8 @@ module.exports = {
     help: {
         name: "report",
         description: "Reports a user",
-        usage: "!report <user> <reason>",
-        command: "!report",
+        usage: ".report <user> <reason>",
+        command: ".report",
         aliases: [],
     },
 
@@ -15,7 +15,7 @@ run: async (bot, message, args) => {
         let Embed = new Discord.RichEmbed()
         .setTitle("Report")
         .setColor("#FF0000")
-        .addField("Command: ","!report" )
+        .addField("Command: ",module.exports.help.command )
         .addField(`Usage: `,module.exports.help.usage)
         .addField("Description: ", module.exports.help.description)
         .setTimestamp();
