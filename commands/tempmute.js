@@ -64,7 +64,7 @@ module.exports = {
             .setColor("#e56b00")
             .addField("Muted member", `${tmUser}`)
             .addField("Muted by", `${message.author}`)
-            .addField("Time", mutetime)
+            .addField("Time", args[1])
             .setTimestamp();
 
         
