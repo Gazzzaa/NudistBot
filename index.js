@@ -57,10 +57,9 @@ bot.on("guildMemberAdd", async member =>{
 
 });
 bot.on("guildMemberRemove", async member =>{
-  let DiscordRole = member.guild.roles.find(r => r.name === "Discord Manager");
   console.log(`${member.id} has left the discord`);
   let leaveChannel = member.guild.channels.find(c => c.name === "server-leave");
-  leaveChannel.send(`The member ${member.user.tag} has left the discord, ${DiscordRole}`);
+  leaveChannel.send(`The member ${member.user.tag} has left the discord,`);
 });
 
 bot.on("message", async message =>{
