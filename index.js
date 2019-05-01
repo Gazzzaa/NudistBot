@@ -48,15 +48,15 @@ bot.on("ready", async () =>{
 });
 
 bot.on("guildMemberAdd", async member =>{
-  let verifiRole = member.guild.roles.find(r => r.name === "Verifi");
   console.log(`${member.id} joined the discord`);
   let joinChannel = member.guild.channels.find(c => c.name === "verification");
-  message.channel.send(`Welcome to the discord ${member}, ${verifiRole} will verifi you soon!`);
+  joinChannel.send(`Welcome to the discord ${member}, ${verifiRole} will verifi you soon!`);
   if (!joinChannel){
     let rulesChannel =  member.guild.channels.find(c => c.name === "rules");
     let memberRole = member.guild.roles.find(r => r.name === "Member");
     await(member.addrole(memberRole.id));
-  }
+  };
+  let verifiRole = member.guild.roles.find(r => r.name === "Verifi");
   let needsverifiRole = member.guild.roles.find(r => r.name === "Needs Verified");
   await(member.addRole(needsverifiRole.id));
 
