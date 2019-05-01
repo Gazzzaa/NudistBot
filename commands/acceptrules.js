@@ -11,7 +11,9 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-    message.member.removeRole("573269226761224202")
+let rrUser = message.mentions.members.first()
+if(!rrUser) return
+rrUser.removeRole(`573269226761224202`);
     
 
 
