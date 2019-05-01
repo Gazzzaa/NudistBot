@@ -52,6 +52,11 @@ bot.on("guildMemberAdd", async member =>{
   console.log(`${member.id} joined the discord`);
   let joinChannel = member.guild.channels.find(c => c.name === "verification");
   joinChannel.send(`Welcome to the discord ${member}, ${verifiRole} will verifi you soon!`);
+  if (!joinChannel){
+    let rulesChannel =  member.guild.channels.find(c => c.name === "rules");
+    let memberRole = member.guild.roles.find(r => r.name === "Member");
+    await(member.addrole(memberRole.id));
+  }
   let needsverifiRole = member.guild.roles.find(r => r.name === "Needs Verified");
   await(member.addRole(needsverifiRole.id));
 
