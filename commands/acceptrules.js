@@ -11,8 +11,7 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-    rrUser = message.guild.members.get(message.author)
-    let rrUser = message.mentions.members.first();
+    let rrUser = message.guild.members.get(message.author)
     rrUser.removeRole(`573269226761224202`);
 
 
