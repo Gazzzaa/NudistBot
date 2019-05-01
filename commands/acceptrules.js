@@ -11,8 +11,7 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-
-    let rUser = message.mentions.members.first();
+    const member = message.guild.member(rUser);
     let gRole = member.guild.roles.find(r => r.name === "Member");
     await(rUser.removeRole(gRole.id));
 
