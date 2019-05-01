@@ -41,7 +41,7 @@ run: async (bot, message, args) => {
         if(!kickChannel) return message.channel.send("Couldn't find kicked channel.");
         
         kUser.kick(reason)
-        kickChannel.send(kickEmbed);
+        message.channel.send(kickEmbed);
 }
 
 }
