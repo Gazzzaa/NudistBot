@@ -12,10 +12,9 @@ module.exports = {
 
 run: async (bot, message, args) => {
     let rrUser = message.mentions.members.first();
-    const member = message.guild.member(rrUser);
-    let memberRole = member.guild.roles.find(r => r.name === "Member");
+ 
     
-    await(rrUser.removeRole(memberRole.id));
+    rrUser.removeRole(`573269226761224202`);
 
 
 
