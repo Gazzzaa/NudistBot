@@ -11,10 +11,9 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-    let rrUser = message.mentions.members.first();
- 
+
     
-    rrUser.removeRole(`573269226761224202`);
+    message.author.removeRole(`573269226761224202`);
 
 
 
