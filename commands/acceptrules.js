@@ -11,9 +11,9 @@ module.exports = {
     },
 
 run: async (bot, message, args) => {
-let rrUser = message.mentions.members.first()
+let rrUser = message.guild.fetchMember(message.member);
 rrUser.removeRole(`573256244283048006`);
-if(!rrUser) return
+
 
     
 
