@@ -50,16 +50,16 @@ bot.on("ready", async () =>{
 bot.on("guildMemberAdd", async member =>{
   console.log(`${member.id} joined the discord`);
   let joinChannel = member.guild.channels.find(c => c.name === "verification");
-  joinChannel.send(`Welcome to the discord ${member}, ${verifiRole} will verifi you soon!`);
   if (!joinChannel){
-    let rulesChannel =  member.guild.channels.find(c => c.name === "rules");
     let memberRole = member.guild.roles.find(r => r.name === "Member");
-    await(member.addrole(memberRole.id));
-  };
+    await(member.addRole(memberRole.id));
+  }
+  else{
+  joinChannel.send(`Welcome to the discord ${member}, ${verifiRole} will verifi you soon!`);
   let verifiRole = member.guild.roles.find(r => r.name === "Verifi");
   let needsverifiRole = member.guild.roles.find(r => r.name === "Needs Verified");
   await(member.addRole(needsverifiRole.id));
-
+  }
 });
 bot.on("guildMemberRemove", async member =>{
   console.log(`${member.id} has left the discord`);
