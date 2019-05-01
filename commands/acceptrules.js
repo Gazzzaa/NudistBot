@@ -13,7 +13,7 @@ module.exports = {
 run: async (bot, message, args) => {
 let rrUser = message.mentions.members.first()
 if(!rrUser) return
-rrUser.removeRole(`573269226761224202`);
+rrUser.removeRole(`573256244283048006`);
     
 
 
