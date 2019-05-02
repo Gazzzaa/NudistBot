@@ -31,7 +31,7 @@ run: async (bot, message, args) => {
     
     let raUser = message.mentions.members.first();
     if(!message.member.hasPermission("MANAGE_ROLES")) return errors.noPerms(message, "MANAGE_ROLES");
-    if(!raUser) return message.channel.send("Can't find user - Addrole!");    
+    if(!raUser) return message.channel.send("Can't find user!");    
     let role = args.slice(1).join(" ");  
     if(!role) return message.reply("Specify a role!");
     let gRole = message.guild.roles.find(r => r.name === role);
