@@ -37,11 +37,11 @@ module.exports = {
             
 
             await tmUser.addRole(muterole);
-            message.reply(`${tmUser} has been muted for ${ms(mutetime)}`);
+            message.reply(`${tmUser} has been put in the naughty corner for ${ms(mutetime)}`);
         
             setTimeout(() => {
                tmUser.removeRole(muterole);
-               message.channel.send(`${tmUser} has been unmuted!`);
+               message.channel.send(`${tmUser} has been excused!`);
             }, ms(mutetime));
 
             const tmEmbed = new Discord.RichEmbed()
