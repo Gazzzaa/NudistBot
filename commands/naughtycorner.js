@@ -33,7 +33,7 @@ module.exports = {
             const mutetime = args[1];
             if(!args[1]){
                 message.channel.send("Enter a valid time, e.g. 10s, 10m, 10d");
-            }
+            };
             
 
             await tmUser.addRole(muterole);
