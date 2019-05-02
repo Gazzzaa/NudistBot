@@ -51,7 +51,7 @@ module.exports = {
             .addField("Time", args[1])
             .setTimestamp();
 
-            const channel = message.guild.channels.find(c => c.name === "Naughty-Corner");
+            const channel = message.guild.channels.find(c => c.name === "naughty-corner");
             return channel.send(tmEmbed);
            
     }
