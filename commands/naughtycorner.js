@@ -29,7 +29,24 @@ module.exports = {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");
         if(tmUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be put in the naughty corner!");
         let muterole = message.guild.roles.find(r => r.name === "Naughty Corner");
-        
+        if(!muterole){
+            try{
+                muterole = await message.guild.createRole({
+                    name: "Naughty Corner",
+                    color: "ffd000",
+                    permissions:[]
+                })
+                
+                    await Promise.all(message.guild.channels.map(chan => chan.overwritePermissions(muterole, {
+                        SEND_MESSAGES: false,
+                        ADD_REACTIONS: false,
+                        SPEAK: false
+                    })))
+                }
+            catch(_){
+                return message.reply("Couldn't find \"NuaghtyCorner\" role, please create it.").then(m => m.delete(5000));
+            }
+        }
             const mutetime = args[1];
             if(!args[1]){
                 message.channel.send("Enter a valid time, e.g. 10s, 10m, 10d");
