@@ -12,7 +12,7 @@ module.exports = {
 
 run: async (bot, message, args) => {
     message.member.removeRole(`573256244283048006`);
-
+    message.member.addRole(`413124139214307328`);
 
 
     
