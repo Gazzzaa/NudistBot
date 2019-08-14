@@ -3,7 +3,7 @@ const ms = require("ms");
 const errors = require("../utils/errors.js");
 module.exports = {
     help:{
-    name: "naughtycorner",
+    name: "naughtycorner(n33ko-server)s",
     description: "Mutes user for a time period",
     usage: ".naughtcorner <user> <time>",
     command: ".naughtycorner",
