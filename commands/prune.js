@@ -23,8 +23,7 @@ run: async (bot, message, args) => {
         message.channel.send(Embed);
         return;
     }
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS");
-    let num = args[0] + 1;
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MEMBERS")
         if(!args[0]) return message.channel.send("Enter a specfic number");
         message.channel.bulkDelete(args[0]).then(() =>{
         message.channel.send(`Cleared ${args[0]} messages`).then(msg => msg.delete(5000));
