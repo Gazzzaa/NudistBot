@@ -42,8 +42,8 @@ let ballEmbed = new Discord.RichEmbed()
 .setAuthor(message.author.tag)
 .setColor("#caff0c")
 .addField("Question", question)
-.addField("Answer", replies[result]
-.setTimestamp()
+.addField("Answer", replies[result])
+.setTimestamp();
 message.channel.send(ballEmbed)}
 
 
