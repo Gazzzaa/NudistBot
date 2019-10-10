@@ -44,7 +44,7 @@ let ballEmbed = new Discord.RichEmbed()
 .addField("Question", question)
 .addField("Answer", replies[result])
 .setTimestamp();
-message.channel.send(ballEmbed);
+message.channel.send(ballEmbed)
 
 
 }
